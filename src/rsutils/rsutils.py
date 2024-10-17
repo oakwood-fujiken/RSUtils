@@ -23,8 +23,6 @@ class RealSenseVideoCapture:
 
         # パイプラインの開始
         self.pipeline.start(self.config)
-        if not self.pipeline.is_started():
-            raise Exception("Pipeline could not be started.")
         self.align = rs.align(rs.stream.color)
         self.running = True
 
@@ -111,4 +109,9 @@ class RealSenseVideoCapture:
         except Exception as e:
             print(f"Error getting property: {e}")
             return None
+
+if __name__ == "__main__":
+    # カメラのシリアル番号を指定してカメラを開く
+    serial_number = "134322071156"
+    cap = RealSenseVideoCapture(serial_number=serial_number)
 
