@@ -9,7 +9,7 @@
 #   generate-hashes: false
 
 -e file:.
-numpy==2.1.2
+numpy==1.23.0
     # via opencv-python
     # via rsutils
 opencv-python==4.10.0.84
