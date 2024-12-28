@@ -9,12 +9,7 @@
 #   generate-hashes: false
 
 -e file:.
-llvmlite==0.42.0
-    # via numba
-numba==0.59.0
-    # via rsutils
-numpy==1.26.0
-    # via numba
+numpy==2.0.0
     # via opencv-python
     # via rsutils
 opencv-python==4.10.0.84
